@@ -1,4 +1,4 @@
-import styles from 'style/post-body.module.css'
+import style from 'styles/post-body.module.css'
 
 export default function PostBody({ children }) {
     return (
