@@ -1,6 +1,6 @@
 import styles from 'styles/hero.module.css';
 import Image from 'next/image'
-import cube from 'images/cube.jpg'
+import cube from 'img/cube.jpg'
 
 export default function Hero({ title, subtitle, imageOn = false }) {
     return (
