@@ -1,7 +1,7 @@
 import Meta from 'components/meta'
 import Container from 'components/container'
 import Hero from 'components/hero'
-import PostBody from 'components/post-body'
+import PostBody from '@/components/post-header'
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/two-column'
 import Image from 'next/image'
 import eyecatch from 'images/about.jpg'
@@ -9,7 +9,18 @@ import eyecatch from 'images/about.jpg'
 export default function About() {
     return (
         <Container>
-            <Meta pageTitle="アバウト" />
+            <Meta
+            pageTitle="アバウト"
+            pageDesc="About development activities"
+            pageImg={eyecatch.src}
+            pageImgW={eyecatch.width}
+            pageImgH={eyecatch.height}
+            />
+
+            <title> アバウト | CUBE</title>
+            <meta property="og:title" content="CUBE" />
+            <meta name="description" content="アウトプットしていくサイト" />
+            <meta property="og:description" content="アウトプットしていくサイト" />
             <Hero title="About" subtitle="About development activities" />
 
             <figure>
