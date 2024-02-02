@@ -3,8 +3,16 @@ import Container from 'components/container'
 import Hero from 'components/hero'
 import PostBody from '@/components/post-header'
 import TwoColumn from 'components/two-column'
+import Accordion from 'components/accordion'
 import Image from 'next/image'
-import eyecatch from 'img/about.jpg'
+// import eyecatch from 'img/about.jpg'
+
+const eyecatch = {
+    src: 'https://images.microcms-assets.io/assets/.../about.jpg',
+    height: 960,
+    width: 1920,
+    blurDataURL: 'data:image/jpeg;base64,',
+}
 
 export default function About() {
     return (
@@ -57,6 +65,28 @@ export default function About() {
                 取り入れて、良いものを作れるようにしています。小さなヒントから新しいものを生み出すようなモノづ
                 くりは、これからも続けていきたいです。
             </p>
+            
+                        <h2>FAQ</h2>
+                        <Accordion heading="プログラミングのポイントについて">
+                            <p>
+                                プログラミングのポイントは、作りたいものを作ることです。楽しいことから思いつき、目標
+                                とゴールを決め、そこに向かって様々な課題を設定していきながら、プログラムを作って
+                                行きます
+                            </p>
+                        </Accordion>
+                        <Accordion heading="古代語の解読について">
+                            <p>
+                                古代語を解読するのに必要なのは、書かれた文字そのものだけです。古代の世界観や思考方法・
+                                それらを読み取ってこそ古代の世界観が理解できます。
+                            </p>
+                        </Accordion>
+                        <Accordion heading="公開リポジトリの活用について">
+                            <p>
+                                公開リポジトリを活用すると、全世界のどこからでもアクセスし、開発者が関連するプロジェクトの
+                                タスクを利用することができます。
+                            </p>
+                        </Accordion>
+
             </PostBody>
                 </TwoColumn.Main>
 

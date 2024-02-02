@@ -27,6 +27,24 @@ export default function Home() {
   )
 }
 
+export async function getStaticProps() {
+  const posts = await getAllPosts(4);
+
+  for (const post of posts) {
+    if (!post.hasOwnProperty("eyecatch")) {
+      post.eyecatch = eyecatchLocal;
+    }
+    const { base64 } = await getPlaiceholder(post.eyecatch.url);
+    post.eyecatch.blurDataURL = base64;
+  }
+
+  return {
+    props: {
+      posts: posts,
+    },
+  };
+}
+
 function Decoration(props) {
   return (
     <div style={{ color: 'red'}}>
